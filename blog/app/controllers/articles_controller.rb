@@ -1,6 +1,16 @@
 class ArticlesController < ApplicationController
+	
+	attr_accessor	:name
+
+	def initialize(name = "first")
+		@name =name
+	end
+    
 	def index
 		@articles = Article.all
+		@name = "change"
+		c = [1,2,3,4]
+		@num = c.map{|e| 2*e}
 	end
 	def show
 		@article = Article.find(params[:id])

@@ -17,4 +17,8 @@
       <td><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
+  <p><%= @name %></p>
+  <% @num.each do |n| %>
+    <p><%= n %></p>
+  <% end %>
 </table>
